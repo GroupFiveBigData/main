@@ -14,7 +14,10 @@ Objectives:
 
 Team Members:
 
-	•	
+	•	Ahlam Jebril
+	•	Betsegaw Tamrat
+	•	Mulusew Meselu
+	•	Wondwosen Sorresa
 
 Background and Motivation
 
