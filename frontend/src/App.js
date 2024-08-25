@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-      <h1>Fraud Detection System Frontend</h1>
+      <h1>Fraud Detection System </h1>
     </div>
   );
 }
