@@ -49,8 +49,9 @@ The data will be stored in a PostgreSQL database, which provides advanced data h
 
 ### Preprocessing:
 Data preprocessing involves cleaning the data, handling missing values, normalizing transaction amounts, and encoding categorical variables to prepare the dataset for analysis.
+
 ### Proof of Data Loading:
-![Data Loaded Successfully](../backend/data/2024-08-25 11.37.01.jpg)
+![Data Loaded Successfully](https://i.ibb.co/bs3nJ8x/2024-08-25-11-37-01.jpg)
 
 ## Machine Learning Models
 
@@ -106,19 +107,3 @@ Reflections on what the team learned throughout the project, including technical
 
 ### Summary:
 The project aimed to detect fraudulent transactions using the MERN stack, PostgreSQL, and machine learning. The system successfully identified fraudulent patterns and provided valuable insights.
-
-### Future Enhancements:
-Potential improvements include integrating additional data sources, refining machine learning models, enhancing the user interface, and scaling the system for larger datasets.
-
-## References
-
-### Citations:
-All references used for the project, including research papers, articles, and online resources, will be listed here.
-
-## Appendices
-
-### Code:
-Relevant code snippets will be included, and a link to the full code repository on GitHub will be provided. 
-
-### Additional Materials:
-Any additional documents or materials related to the project, such as design diagrams, will be included.
