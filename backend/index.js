@@ -1,10 +1,18 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const app = express();
-const port = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {
-  res.send('Fraud Detection System Backend');
-});
+dotenv.config();
+
+const port = process.env.PORT || 3002;
+
+// Import routes
+const indexRoute = require('./routes/index');
+
+app.use(express.json());
+
+// Use routes
+app.use('/', indexRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
