@@ -14,10 +14,7 @@ Objectives:
 
 Team Members:
 
-	•	Ahlam Jebril
-	•	Betsegaw Tamrat
-	•	Mulusew Meselu
-	•	Wondwosen Sorresa
+	•	[List the members of Group 5]
 
 Background and Motivation
 
