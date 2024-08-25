@@ -1,0 +1,16 @@
+.analytics-section {
+    margin: 20px 0;
+  }
+  
+  .chart-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart-container canvas {
+    max-width: 100%;
+  }

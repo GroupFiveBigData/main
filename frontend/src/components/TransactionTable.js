@@ -1,9 +1,10 @@
 import React from 'react';
+import './TransactionTable.css'; 
 
 const TransactionTable = ({ transactions }) => {
   return (
-    <div className="transaction-table">
-      <table>
+    <div className="transaction-table-container">
+      <table className="transaction-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -14,7 +15,7 @@ const TransactionTable = ({ transactions }) => {
         </thead>
         <tbody>
           {transactions.map((transaction) => (
-            <tr key={transaction.id}>
+            <tr key={transaction.id} className={transaction.flagged ? 'flagged' : ''}>
               <td>{transaction.id}</td>
               <td>${transaction.amount.toFixed(2)}</td>
               <td>{transaction.flagged ? 'Yes' : 'No'}</td>

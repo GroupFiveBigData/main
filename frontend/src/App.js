@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import Dashboard from './pages/Dashboard';
 import NotFoundPage from './pages/NotFoundPage';
 import TransactionListPage from './pages/TransactionListPage';
+import AnalysisPage from './pages/AnalyticsPage';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/transactions" element={<TransactionListPage />} />
+        <Route path="/transactions" element={<TransactionListPage />} />        
+        <Route path="/analytics" element={<AnalysisPage />} />
+
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

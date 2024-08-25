@@ -1,0 +1,83 @@
+/* Container for the table */
+.transaction-table-container {
+  width: 100%;
+  margin: 20px auto;
+  overflow-x: auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Header styling */
+.transaction-table thead th {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* Body row styling */
+.transaction-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.transaction-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.transaction-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Cell padding */
+.transaction-table tbody td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/* Flagged row styling */
+.transaction-table tbody tr.flagged {
+  background-color: #ffd1d1;
+}
+
+.transaction-table tbody tr.flagged:hover {
+  background-color: #ffcccc;
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+  .transaction-table thead {
+    display: none;
+  }
+
+  .transaction-table, .transaction-table tbody, .transaction-table tr, .transaction-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .transaction-table tr {
+    margin-bottom: 15px;
+  }
+
+  .transaction-table tbody td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .transaction-table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

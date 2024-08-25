@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TransactionTable from '../components/TransactionTable';
 import AnalyticsSection from '../components/AnalyticsSection';
 
-const TransactionListPage = () => {
+const AnalysisPage = () => {
   const [transactions, setTransactions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,8 +10,7 @@ const TransactionListPage = () => {
     const fetchTransactions = async () => {
       try {
         const response = await fetch('http://localhost:3002/transactions');        
-        console.log('Response:', response);       
-         if (!response.ok) {
+        if (!response.ok) {
           throw new Error('Failed to fetch transactions');
         }
         const data = await response.json();
@@ -32,11 +30,9 @@ const TransactionListPage = () => {
 
   return (
     <div className="container">
-      <h1>Transactions</h1>
-      <TransactionTable transactions={transactions} />
-      {/* <AnalyticsSection transactions={transactions} /> */}
+      <AnalyticsSection transactions={transactions} />
     </div>
   );
 };
 
-export default TransactionListPage;
+export default AnalysisPage;
