@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import DashboardPage from './pages/DashboardPage';
+import Dashboard from './pages/Dashboard';
 import NotFoundPage from './pages/NotFoundPage';
 import TransactionListPage from './pages/TransactionListPage';
 
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/transactions" element={<TransactionListPage />} />
 
         <Route path="*" element={<NotFoundPage />} />

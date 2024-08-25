@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DashboardPage = () => {
+const Dashboard = () => {
   const [totalTransactions, setTotalTransactions] = useState(0);
   const [flaggedTransactions, setFlaggedTransactions] = useState(0);
   const [recentAlerts, setRecentAlerts] = useState([]);
@@ -47,4 +47,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default Dashboard;

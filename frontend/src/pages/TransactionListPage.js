@@ -1,39 +1,45 @@
 import React, { useState, useEffect } from 'react';
+import TransactionTable from '../components/TransactionTable';
 
 const TransactionListPage = () => {
   const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch transactions from the backend (placeholder logic)
-    // Replace with an actual API call
-    setTransactions([
-      { id: 1, amount: 149.62, flagged: false },
-      { id: 2, amount: 378.66, flagged: true },
-      { id: 3, amount: 69.99, flagged: false },
-    ]);
+    const fetchTransactions = async () => {
+      try {
+        console.log('Fetching transactions...');
+        const response = await fetch('http://localhost:3002/transactions');        console.log('Response:', response);
+        if (!response.ok) {
+          throw new Error('Failed to fetch transactions');
+        }
+ 
+        const data = await response.json();
+        console.log('Data:', data);
+        setTransactions(data);
+      } catch (error) {
+        console.error('Error:', error.message);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTransactions();
   }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+  console.log('Transactions:', transactions);
 
   return (
     <div className="container">
       <h1>Transactions</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Amount</th>
-            <th>Flagged</th>
-          </tr>
-        </thead>
-        <tbody>
-          {transactions.map((transaction) => (
-            <tr key={transaction.id}>
-              <td>{transaction.id}</td>
-              <td>${transaction.amount.toFixed(2)}</td>
-              <td>{transaction.flagged ? 'Yes' : 'No'}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {transactions.length > 0 && (
+        <TransactionTable transactions={transactions} />
+      )}
     </div>
   );
 };

@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>Welcome to the Fraud Detection System</h1>
-      <Link to="/dashboard">Go to Dashboard</Link>
+      <Link to="/transactions">Go to Transactions</Link>
     </div>
   );
 };

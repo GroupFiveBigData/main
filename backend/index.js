@@ -1,19 +1,11 @@
 const express = require('express');
-const dotenv = require('dotenv');
+const cors = require('cors');
 const app = express();
+const transactionsRoute = require('./routes/transactions');
 
-dotenv.config();
-
-const port = process.env.PORT || 3002;
-
-// Import routes
-const indexRoute = require('./routes/index');
-
+app.use(cors());  // Add this line
 app.use(express.json());
+app.use(transactionsRoute);
 
-// Use routes
-app.use('/', indexRoute);
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+const PORT = process.env.PORT || 3002;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
