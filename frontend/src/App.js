@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import NotFoundPage from './pages/NotFoundPage';
 import TransactionListPage from './pages/TransactionListPage';
 import AnalysisPage from './pages/AnalyticsPage';
+import PredictPage from './pages/PredictPage';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/transactions" element={<TransactionListPage />} />        
         <Route path="/analytics" element={<AnalysisPage />} />
+        <Route path="/predict" element={<PredictPage />} />
+
 
 
         <Route path="*" element={<NotFoundPage />} />

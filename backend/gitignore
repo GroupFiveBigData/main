@@ -74,7 +74,7 @@ tmp/
 temp/
 
 # Ignore data files
-backend/data/creditcard.csv
+data/creditcard.csv
 
 # Miscellaneous files
 *.lock

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TransactionTable from '../components/TransactionTable';
-import AnalyticsSection from '../components/AnalyticsSection';
+
 
 const TransactionListPage = () => {
   const [transactions, setTransactions] = useState([]);
