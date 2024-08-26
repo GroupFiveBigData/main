@@ -122,5 +122,20 @@ The project aimed to detect fraudulent transactions using the MERN stack, Postgr
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
+git clone https://github.com/GroupFiveBigData/main
+
+
+### Step 2: Install Backend Dependencies
+cd backend
+npm install
+### Step 3: Set Up the PostgreSQL Database
+
+	•	Create a new PostgreSQL database.
+	•	Import the dataset into the database.
+
+### Step 4: Configure Environment Variables
+
+Create a .env file in the root of the backend directory and add the following:
+DATABASE_URL=your_postgresql_connection_string
+npm run dev ---for backend
+npm start---for frontend
