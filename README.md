@@ -79,9 +79,6 @@ PostgreSQL manages financial transaction data, supporting complex queries and ef
 ### Docker Integration:
 Docker is used to containerize the application, ensuring a consistent environment for development, testing, and deployment.
 
-### GitHub Repository:
-The project code and documentation are maintained in a GitHub repository for version control and collaboration. [Link to the repository]
-
 ## Data Analysis and Visualization
 
 ### Tools and Libraries:
@@ -90,27 +87,15 @@ Tools such as D3.js, Chart.js, and other JavaScript libraries are used for data 
 ### Visualization Techniques:
 Techniques include creating graphs, charts, and interactive dashboards to visualize transaction patterns, anomalies, and model predictions.
 
-### Findings:
-Key findings from the data analysis are presented, highlighting patterns and insights that help identify fraudulent activities.
-
-## Results and Discussion
-
 ### Model Performance:
-The performance of the machine learning models is summarized, focusing on their ability to detect fraud accurately.
+The model training process was completed successfully over 100 epochs. The final accuracy achieved by the model is 99.8% on the training data with a validation accuracy of 99.9%. The model's loss on the training data was 0.0295, with a validation loss of 0.0212. These metrics indicate that the model has learned the patterns in the data well and is generalizing effectively to unseen data.
 
-### Challenges:
-Challenges encountered during the project, such as data quality issues, model tuning, and integration difficulties, are discussed.
+- **Training Accuracy:** 99.8%
+- **Validation Accuracy:** 99.9%
+- **Training Loss:** 0.0295
+- **Validation Loss:** 0.0212
 
-### Lessons Learned:
-Reflections on what the team learned throughout the project, including technical skills, teamwork, and problem-solving strategies.
-
-## Conclusion and Future Work
-
-### Summary:
-The project aimed to detect fraudulent transactions using the MERN stack, PostgreSQL, and machine learning. The system successfully identified fraudulent patterns and provided valuable insights.
-
-### Final Output:
-![Final Output](https://path-to-your-image.com/Screenshot2024-08-26.png)
+The high accuracy and low loss values suggest that the model is performing exceptionally well in detecting fraudulent transactions. However, continuous monitoring and evaluation are recommended to ensure consistent performance over time, especially when applied to new datasets.
 
 ## Installation Steps
 
@@ -120,20 +105,20 @@ The project aimed to detect fraudulent transactions using the MERN stack, Postgr
 - Docker (optional for containerization)
 - Git
 
-### Step 1: Clone the Repository
+### Steps: 
 ```bash
 git clone https://github.com/GroupFiveBigData/main
 
 
-### Step 2: Install Backend Dependencies
+ Install Backend Dependencies
 cd backend
 npm install
-### Step 3: Set Up the PostgreSQL Database
+ Set Up the PostgreSQL Database
 
 	•	Create a new PostgreSQL database.
 	•	Import the dataset into the database.
 
-### Step 4: Configure Environment Variables
+ Configure Environment Variables
 
 Create a .env file in the root of the backend directory and add the following:
 DATABASE_URL=your_postgresql_connection_string
